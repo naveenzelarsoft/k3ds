@@ -3,7 +3,7 @@ kind: Simple
 name: naveen
 image: rancher/k3s:v1.20.4-k3s1
 servers: 1
-agents: 2
+agents: 1
 ports:
   - port: 8080:80
     nodeFilters:
