@@ -1,10 +1,10 @@
 apiVersion: k3d.io/v1alpha2 # this will change in the future as we make everything more stable
 kind: Simple # internally, we also have a Cluster config, which is not yet available externally
 name: naveen # name that you want to give to your cluster (will still be prefixed with `k3d-`)
-image: rancher/k3s:v1.20.4-k3s1 # same as `--image rancher/k3s:v1.20.4-k3s1`
+image: nginx # same as `--image rancher/k3s:v1.20.4-k3s1`
 servers: 1 # same as `--servers 1`
 agents: 1 # same as `--agents 2`
 ports:
-  - port: 8080:80
+  - port: 80:80
     nodeFilters:
         - loadbalancer
