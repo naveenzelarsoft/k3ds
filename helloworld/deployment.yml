@@ -21,6 +21,6 @@ spec:
     spec:
       containers:
       - name: hello
-        image: naveen5035/hello:v2
+        image: naveen5035/hello:v1
         ports:
         - containerPort: 80
