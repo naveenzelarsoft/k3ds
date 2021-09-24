@@ -5,6 +5,12 @@ metadata:
   labels:
     app: hello
 spec:
+  replicas: 2
+  strategy:
+     type: RollingUpdate
+     rollingUpdate:
+        maxUnavailable: 0
+        maxsurge: 1
   selector:
     matchLabels:
       app: hello
