@@ -1,0 +1,6 @@
+kubectl apply -f blue-v1.yml
+kubectl apply -f blue-service-v1.yml
+kubectl apply -f green-v2.yml
+kubectl apply -f service-green-v2.yml
+kubectl apply -f blue-v2.yml
+kubectl apply -f service-blue-v2.yml
