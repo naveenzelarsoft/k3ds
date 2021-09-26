@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: hello
 spec:
   replicas: 3
   strategy:
@@ -9,7 +9,7 @@ spec:
   template:
     metadata:
       labels:
-        app: hello-world
+        name: hello
     spec:
       containers:
         - name: hello
@@ -20,14 +20,14 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: hello-world
+  name: hello
   labels:
-    name: hello-world
+    name: hello
 spec:
   ports:
     - port: 80
       targetPort: 80
       protocol: TCP
   selector:
-    app: hello-world
+    app: hello
   type: LoadBalancer
