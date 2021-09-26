@@ -5,16 +5,17 @@ metadata:
   labels:
     app: hello
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
-  - name: http
-    port: 80
-    targetPort: http
+  - port: 80
+    targetPort: 80
+    protocol: TCP
+    name: http
 
   # Note here that we match both the app and the version
   selector:
     app: hello
-    version: v1.0.0
+    version: v1
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -27,12 +28,12 @@ spec:
   selector:
     matchLabels:
       app: hello
-      version: v1.0.0
+      version: v1
   template:
     metadata:
       labels:
         app: hello
-        version: v1.0.0
+        version: v1
     spec:
       containers:
       - name: hello
