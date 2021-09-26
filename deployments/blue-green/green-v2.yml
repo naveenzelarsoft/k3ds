@@ -21,7 +21,5 @@ spec:
       - name: hello
         image: naveen5035/hello:v2
         ports:
-        - port: 80
-          targetPort: 80
-          protocol: TCP
-          name: http
+        - name: http
+          containerPort: 80
