@@ -22,7 +22,7 @@ kind: Service
 metadata:
   name: hello
   labels:
-    name: hello
+    app: hello
 spec:
   ports:
     - port: 80
