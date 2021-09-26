@@ -1,4 +1,5 @@
 kubectl apply -f blue-v1.yml
 kubectl apply -f green-v2.yml
+kubectl apply -f ingress.yml
 kubectl patch service hello -p '{"spec":{"selector":{"version":"v2"}}}'
 kubectl delete deploy hello-v1
